@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div id="nav">
+      <div class="logo">
+        <img src="/images/logo.png" alt="">
+      </div>
+      <div class="filters">
+        <div class="INR filterIC">INR  <i class="ri-arrow-down-s-fill"></i></div>
+        <div class="BTC filterIC">BTC  <i class="ri-arrow-down-s-fill"></i></div>
+        <div class="BUY filterIC">BUY BTC</div>
+      </div>
+      <div class="mode">
+        <div id="container" class="timer container"><p>0</p></div>
+        <div class="telegram"><img src="/images/telegram.png" alt=""> Connect Telegram</div>
+        <div class="dark-light"><label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label></div>
+      </div>
+    
+    </div>
+    <div class="best-price-to-trade">
+      <p>Best Price To Trade</p>
+    </div>
+    <div id="counts">
+      <div class="one count"><h1>0.08%</h1><p>5 Mins</p></div>
+      <div class="two count"><h1>0.77%</h1><p>1 Hour</p></div>
+      <div class="three count"><h1>₹38,32,722</h1><p>Average BTC/INR net price including commission</p></div>
+      <div class="four count"><h1>7.12%</h1><p>1 Day</p></div>
+      <div class="five count"><h1>14.84%</h1><p>7 Days</p></div>
+    </div>
+    <div id="data">
+      <table cellspacing="0" >
+        <tr class="table_head">
+          <th>Name</th>
+          <th>Last</th>
+          <th>Buy</th>
+          <th>Sell</th>
+          <th>Volume</th>
+          <th>Base Unit</th>
+        </tr>
+        
+          <!-- <tr class="data_row">
+              <td>BTC/INR</td>
+              <td>3732611.0</td>
+              <td>3732611.0</td>
+              <td>3741449.0</td>
+              <td>3.45861</td>
+              <td>btc</td>
+          </tr> -->
+          <%data.forEach(function(d){ %>
+            <tr class="data_row">
+              <td><%=d.name%></td>
+              <td><%=d.last%></td>
+              <td><%=d.buy%></td>
+              <td><%=d.sell%></td>
+              <td><%=d.volume%></td>
+              <td><%=d.base_unit%></td>
+          </tr>
+          <% }) %>
+         
+        
+      </table>
+    </div>
+   
+    <div class="footer">
+      <div class="foot">
+        <p>Copyright © 2019</p>
+        <p>HodlInfo.com</p>
+      </div>
+      
+      <p>Support</p>
+    </div>
+   
+  </body>
+  <script>
+
+
+    
+  </script>
+</html>
